@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/view_search"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_190sdp"
+    android:layout_below="@+id/home_bar"
+   >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_160sdp"
+        android:id="@+id/view_pager"
+        >
+
+        <ImageView
+            android:id="@+id/imageMap"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_160sdp"
+            android:background="@mipmap/map_banner"
+            />
+
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_25sdp"
+            android:id="@+id/goMap"
+            android:background="@drawable/white_button_background"
+            android:text="@string/find_out"
+            app:backgroundTint="@android:color/white"
+            android:textSize="@dimen/_13ssp"
+            android:textColor="@color/dark_blue"
+            android:textAppearance="@style/TabLayout.text"
+            android:drawableEnd="@drawable/ic_red_arrow"
+            android:paddingEnd="5dp"
+            android:paddingStart="20dp"
+            android:drawablePadding="10dp"
+           android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="@dimen/_40sdp"
+            android:insetBottom="0dp"
+            android:insetTop="0dp"
+            android:insetLeft="0dp"
+            android:insetRight="0dp"
+            />
+
+    </RelativeLayout>
+
+
+
+
+
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_alignParentBottom="true"
+            android:id="@+id/search"
+            android:elevation="10dp"
+            android:layout_marginBottom="10dp"
+            app:cardCornerRadius="25dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+
+            >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ic_search"
+                    android:backgroundTint="@color/grey"
+                    android:layout_marginStart="10dp"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/searchicon"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/search"
+                    android:layout_toEndOf="@+id/searchicon"
+                    android:layout_marginStart="20dp"
+                    android:textSize="18sp"
+                    android:textColor="@color/grey"
+                    android:layout_centerVertical="true"
+                    />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

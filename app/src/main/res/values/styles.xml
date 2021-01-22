@@ -1,0 +1,134 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/blue2</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:statusBarColor">@color/tra_gray</item>
+        <item name="android:layoutDirection">rtl</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+
+
+    </style>
+
+
+    <style name="CustomInverseProgress" parent="android:Widget.Material.Light.ProgressBar.Small.Inverse">
+        <item name="android:indeterminate">true</item>
+        <item name="android:indeterminateTintMode">src_in</item>
+        <item name="android:indeterminateTint">@color/blue5</item>
+
+    </style>
+
+    <style name="CustomInverseProgressMid" parent="android:Widget.Material.Light.ProgressBar.Inverse">
+        <item name="android:indeterminate">true</item>
+        <item name="android:indeterminateTintMode">src_in</item>
+        <item name="android:indeterminateTint">@color/blue5</item>
+
+    </style>
+
+
+    <style name="serviceChip" parent="Widget.MaterialComponents.Chip.Action">
+
+
+        <item name="shapeAppearanceOverlay">@style/Rounded</item>
+        <item name="chipBackgroundColor">@android:color/white</item>
+        <item name="chipSurfaceColor">@android:color/white</item>
+        <item name="android:clickable">false</item>
+        <item name="android:stateListAnimator" tools:ignore="NewApi">
+            @animator/chip_state_list
+        </item>
+        <item name="android:textColor">@color/dark_blue</item>
+        <item name="android:textSize">@dimen/_10ssp</item>
+        <item name="android:textStyle">bold</item>
+
+
+    </style>
+
+
+    <style name="timeChip" parent="Widget.MaterialComponents.Chip.Choice">
+
+
+        <item name="shapeAppearanceOverlay">@style/Rounded</item>
+        <item name="chipBackgroundColor">@color/button_toggle</item>
+        <item name="chipSurfaceColor">@color/button_toggle</item>
+        <item name="android:stateListAnimator" tools:ignore="NewApi">
+            @animator/time_chip_state_list
+        </item>
+        <item name="android:textColor">@color/text_toggle</item>
+        <item name="android:textSize">@dimen/_10ssp</item>
+        <item name="android:textStyle">bold</item>
+
+
+    </style>
+
+
+
+    <style name="FilterChip" parent="Widget.MaterialComponents.Chip.Filter">
+
+
+        <item name="shapeAppearanceOverlay">@style/Rounded</item>
+        <item name="chipBackgroundColor">@color/button_toggle</item>
+        <item name="chipSurfaceColor">@color/button_toggle</item>
+        <item name="checkedIconVisible">false</item>
+        <item name="checkedIcon">@null</item>
+        <item name="android:stateListAnimator" tools:ignore="NewApi">
+            @animator/chip_state_list
+        </item>
+        <item name="android:textColor">@color/text_toggle</item>
+        <item name="android:textSize">@dimen/_10ssp</item>
+        <item name="android:textStyle">bold</item>
+
+
+    </style>
+
+
+
+    <style name="Rounded" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+
+        <item name="cornerSize">10%</item>
+    </style>
+
+
+    <style name="ShapeAppearanceOverlay.barberoa.Button.Circle" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="TabLayout.text" parent="android:TextAppearance">
+        <item name="android:textSize">@dimen/_13ssp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextAppearance.MyApp.Title.Collapsed" parent="android:TextAppearance">
+        <item name="android:textColor">@color/dark_blue</item>
+        <item name="android:textSize">@dimen/_11ssp</item>
+    </style>
+
+
+    <style name="Switch" parent="Widget.MaterialComponents.CompoundButton.Switch">
+        <item name="colorOnSurface">@color/tra_gray</item>
+        <item name="colorSecondary">@color/blue5</item>
+        <item name="alpha">1</item>
+    </style>
+
+
+    <style name="RatingBar" parent="Theme.AppCompat">
+
+
+        <item name="colorControlNormal">@color/tra_gray</item>
+        <item name="colorControlActivated">@color/blue2</item>
+
+    </style>
+
+
+
+    <style name="MY.DIALOG" parent="android:Theme" >
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowIsFloating">false</item>
+
+    </style>
+
+</resources>

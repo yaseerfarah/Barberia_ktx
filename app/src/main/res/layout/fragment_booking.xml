@@ -1,0 +1,604 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".View.Booking">
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/detailsBar"
+        android:background="@android:color/white"
+
+        >
+
+
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:contentScrim="@android:color/white"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:titleEnabled="false"
+            android:id="@+id/collapseToolBar"
+            >
+
+
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:id="@+id/toolbar"
+                app:layout_collapseMode="pin"
+                app:contentInsetStart="0dp"
+                >
+
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    >
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="@dimen/_35sdp"
+                        android:layout_height="@dimen/_35sdp"
+                        app:cardCornerRadius="@dimen/_18sdp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_margin="@dimen/_5sdp"
+                        android:id="@+id/notification"
+                        >
+
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@drawable/ic_baseline_notifications_24"
+                            android:layout_gravity="center"
+
+                            />
+
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:id="@+id/title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/_18ssp"
+                        android:layout_centerInParent="true"
+                        android:textColor="@color/dark_blue"
+                        android:text="@string/reservation"
+                        android:textStyle="bold"
+                        android:ellipsize="marquee"
+                        android:singleLine="true"
+                        />
+
+
+
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="@dimen/_35sdp"
+                        android:layout_height="@dimen/_35sdp"
+                        app:cardCornerRadius="@dimen/_18sdp"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_margin="@dimen/_5sdp"
+                        android:id="@+id/nav_view"
+                        >
+
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@drawable/ic_baseline_nav_24"
+                            android:layout_gravity="center"
+
+                            />
+
+                    </androidx.cardview.widget.CardView>
+
+
+                </RelativeLayout>
+
+            </com.google.android.material.appbar.MaterialToolbar>
+
+
+
+
+
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+
+
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        >
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/_10sdp"
+            >
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:id="@+id/placeLayout">
+
+                <TextView
+                    android:id="@+id/place_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:textSize="@dimen/_17ssp"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:textColor="@color/dark_blue"
+                    android:text="كوافير فرندز للرجال"
+                    android:textStyle="bold"
+                    android:layout_weight="2"
+                    />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    >
+
+                    <ImageView
+                        android:layout_width="@dimen/_15sdp"
+                        android:layout_height="@dimen/_15sdp"
+                        app:srcCompat="@drawable/ic_baseline_location_on_24"
+                        android:layout_gravity="center_vertical"
+                        />
+
+                    <TextView
+                        android:id="@+id/place_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/_14ssp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:textColor="@android:color/darker_gray"
+                        android:text="أول شارع فيصل-اتجاه الجيزة-بجوار معرض الابيض لسيارات -سنتر النصر الدور الجيزة"
+                        android:textStyle="normal"
+                        />
+
+                </LinearLayout>
+
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/grey"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    />
+
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:id="@+id/serviceLayout">
+
+                <TextView
+                    android:id="@+id/service_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:textSize="@dimen/_16ssp"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:textColor="@color/dark_blue"
+                    android:text="@string/service_chip"
+                    android:textStyle="bold"
+                    android:ellipsize="marquee"
+                    android:singleLine="true"
+                    android:layout_weight="2"
+                    />
+
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/serviceRecycler"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:visibility="gone"
+                    />
+
+                <include layout="@layout/service_cardview"/>
+                <include layout="@layout/service_cardview"/>
+
+
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_30sdp"
+                    android:id="@+id/add_service"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:text="@string/add_more"
+                    android:backgroundTint="@android:color/white"
+                    android:textColor="@color/dark_blue"
+                    android:textSize="@dimen/_12ssp"
+                    android:textAppearance="@style/TabLayout.text"
+                    android:textAllCaps="false"
+                    app:rippleColor="@color/blue2"
+                    app:shapeAppearance="@style/ShapeAppearanceOverlay.barberoa.Button.Circle"
+                    app:backgroundTint="@android:color/white"
+                    app:icon="@drawable/ic_add_circle"
+                    app:iconTint="@null"
+                    app:iconGravity="end"
+                    app:iconSize="@dimen/_20sdp"
+                    android:insetBottom="0dp"
+                    android:insetTop="0dp"
+                    android:insetLeft="0dp"
+                    android:insetRight="0dp"
+
+                    />
+
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/grey"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:id="@+id/dateLayout">
+
+                <TextView
+                    android:id="@+id/date_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:textSize="@dimen/_16ssp"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:textColor="@color/dark_blue"
+                    android:text="@string/date"
+                    android:textStyle="bold"
+                    android:ellipsize="marquee"
+                    android:singleLine="true"
+                    android:layout_weight="2"
+                    />
+
+
+                <include layout="@layout/calender_view"/>
+
+
+
+                    <HorizontalScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:scrollbars="none">
+
+                        <com.google.android.material.chip.ChipGroup
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/service_chip_group"
+
+                            app:chipSpacingHorizontal="@dimen/_2sdp"
+                            app:singleLine="true"
+                            app:selectionRequired="true"
+                            app:singleSelection="true"
+                            >
+
+                            <com.google.android.material.chip.Chip
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                style="@style/timeChip"
+                                android:text="9:00 AM"
+
+                                />
+
+
+
+                            <com.google.android.material.chip.Chip
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                style="@style/timeChip"
+                                android:text="9:30 AM"
+                                />
+
+
+
+                            <com.google.android.material.chip.Chip
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                style="@style/timeChip"
+                                android:text="10:00 AM"
+                                />
+
+
+                            <com.google.android.material.chip.Chip
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                style="@style/timeChip"
+                                android:text="10:30 AM"
+                                />
+
+                            <com.google.android.material.chip.Chip
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                style="@style/timeChip"
+                                android:text="11:00 AM"
+                                />
+
+                            <com.google.android.material.chip.Chip
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                style="@style/timeChip"
+                                android:text="11:30 AM"
+                                />
+
+
+                        </com.google.android.material.chip.ChipGroup>
+
+                    </HorizontalScrollView>
+
+
+
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/grey"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_gravity="bottom"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@color/grey3"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/_30sdp"
+                        android:background="@android:color/white"
+                        android:hint="@string/discount_edit_text"
+                        android:lines="1"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        android:paddingStart="@dimen/_10sdp"
+                        android:paddingEnd="@dimen/_5sdp"
+                        android:id="@+id/discountEditText"
+                        android:inputType="textPersonName"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="2"/>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/_30sdp"
+                        android:id="@+id/applyButton"
+                        app:backgroundTint="@color/blue2"
+                        android:text="@string/apply"
+                        android:textSize="@dimen/_13ssp"
+                        android:textColor="@android:color/white"
+                        android:textStyle="bold"
+                        android:layout_gravity="center_vertical"
+                        android:insetBottom="0dp"
+                        android:insetTop="0dp"
+                        android:insetLeft="0dp"
+                        android:insetRight="0dp"
+                        android:layout_weight="0"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        android:layout_marginStart="@dimen/_2sdp"
+                        />
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    >
+
+                    <TextView
+                        android:id="@+id/discount_text"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/_14ssp"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:textColor="@color/dark_blue"
+                        android:text="@string/discount"
+                        android:textStyle="normal"
+                        android:ellipsize="marquee"
+                        android:singleLine="true"
+                        android:layout_weight="1"
+                        android:layout_gravity="center_vertical"
+                        />
+
+
+                    <TextView
+                        android:id="@+id/discount_value"
+                        android:layout_width="0dp"
+                        android:gravity="end"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/_14ssp"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:textColor="@color/dark_blue"
+                        android:text="0.00 ج.م"
+                        android:textStyle="bold"
+                        android:ellipsize="marquee"
+                        android:singleLine="true"
+                        android:layout_weight="2"
+                        android:layout_gravity="center_vertical"
+                        />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    >
+
+                    <TextView
+                        android:id="@+id/total_text"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/_14ssp"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:textColor="@color/dark_blue"
+                        android:text="@string/total"
+                        android:textStyle="normal"
+                        android:ellipsize="marquee"
+                        android:singleLine="true"
+                        android:layout_weight="1"
+                        android:layout_gravity="center_vertical"
+                        />
+
+
+                    <TextView
+                        android:id="@+id/total_value"
+                        android:layout_width="0dp"
+                        android:gravity="end"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/_14ssp"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:textColor="@color/dark_blue"
+                        android:text="149.99 ج.م"
+                        android:textStyle="bold"
+                        android:ellipsize="marquee"
+                        android:singleLine="true"
+                        android:layout_weight="2"
+                        android:layout_gravity="center_vertical"
+                        />
+
+                </LinearLayout>
+
+
+
+                <com.gigamole.library.ShadowLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    app:sl_shadowed="true"
+                    app:sl_shadow_angle="90"
+                    app:sl_shadow_radius="@dimen/_10sdp"
+                    app:sl_shadow_distance="@dimen/_5sdp"
+                    app:sl_shadow_color="@color/blue2"
+
+                    >
+
+                    <com.google.android.material.button.MaterialButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/booking"
+                        android:layoutDirection="rtl"
+                        app:shapeAppearance="@style/ShapeAppearanceOverlay.barberoa.Button.Circle"
+                        app:backgroundTint="@color/blue2"
+                        android:text="@string/done"
+                        android:textAppearance="@style/TabLayout.text"
+                        android:textSize="@dimen/_17ssp"
+                        android:stateListAnimator="@null"                app:iconTint="@null"
+                        app:iconSize="@dimen/_23sdp"
+                        app:icon="@drawable/ic_white_arrow"
+                        app:iconGravity="end"
+                        android:paddingEnd="@dimen/_30sdp"
+                        android:paddingStart="@dimen/_30sdp"
+                        android:insetBottom="0dp"
+                        android:insetTop="0dp"
+                        android:insetLeft="0dp"
+                        android:insetRight="0dp"
+                        android:elevation="0dp"
+                        app:elevation="0dp"
+
+                        />
+
+                </com.gigamole.library.ShadowLayout>
+
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

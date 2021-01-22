@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+   android:layout_marginTop="@dimen/_5sdp"
+    
+   android:orientation="horizontal"
+    android:background="@android:color/white"
+    android:padding="@dimen/_10sdp"
+
+    >
+
+
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:id="@+id/image_card"
+            android:layout_gravity="top"
+            app:shapeAppearance="@style/ShapeAppearanceOverlay.barberoa.Button.Circle"
+            >
+
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                style="@style/CustomInverseProgress"
+                android:id="@+id/progress"
+                android:visibility="gone"
+                />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/user_image"
+                app:srcCompat="@drawable/ic_user"
+                android:scaleType="fitCenter"
+
+
+                />
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:orientation="vertical"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RatingBar
+                    android:id="@+id/ratingBar"
+                    android:layoutDirection="ltr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/RatingBar"
+                    android:layout_marginEnd="@dimen/_3sdp"
+                    style="?attr/ratingBarStyleSmall"
+                    android:rating="3.5"
+                    android:layout_weight="0"
+                    android:progressTint="@color/blue5"
+
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/comment_time"
+                    android:layout_weight="1"
+                    android:text="12 December 2018"
+                    android:layout_gravity="end"
+                    android:textSize="@dimen/_10ssp"
+                    android:textColor="@android:color/darker_gray"
+                    android:textStyle="normal"
+                    android:ellipsize="marquee"
+                    android:singleLine="true"
+                    android:gravity="center_vertical"
+                    android:layout_marginEnd="@dimen/_3sdp"
+                    />
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_13ssp"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:textColor="@color/dark_blue"
+                android:text="احمد سالم"
+                android:textStyle="bold"
+                android:ellipsize="marquee"
+                android:singleLine="true"
+                />
+
+
+            <TextView
+                android:id="@+id/comment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_12ssp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:textColor="@color/dark_grey"
+                android:text="رائع جدا والموظفين في غاية الاحترام"
+                android:textStyle="normal"
+                />
+
+        </LinearLayout>
+
+
+
+</LinearLayout>

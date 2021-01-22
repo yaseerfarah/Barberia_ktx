@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/calenderLayout"
+    android:layout_marginTop="@dimen/_10sdp"
+    android:layout_marginEnd="@dimen/_5sdp"
+    android:layout_marginStart="@dimen/_5sdp"
+    android:orientation="vertical"
+   >
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:text="سبتمبر 2020"
+            android:textColor="@color/dark_blue"
+            android:textSize="@dimen/_15ssp"
+            android:textStyle="normal"
+            android:id="@+id/cal_month"
+            android:ellipsize="marquee"
+            android:singleLine="true"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/_10sdp"
+            >
+
+
+            <TextView
+                android:id="@+id/legendText1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/sun"
+                android:textColor="@color/grey"
+                android:textSize="@dimen/_12ssp" />
+
+            <TextView
+                android:id="@+id/legendText2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/mon"
+                android:textColor="@color/grey"
+                android:textSize="@dimen/_12ssp" />
+
+            <TextView
+                android:id="@+id/legendText3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/tue"
+                android:textColor="@color/grey"
+                android:textSize="@dimen/_12ssp" />
+
+            <TextView
+                android:id="@+id/legendText4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/wed"
+                android:textColor="@color/grey"
+                android:textSize="@dimen/_12ssp" />
+
+            <TextView
+                android:id="@+id/legendText5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/thu"
+                android:textColor="@color/grey"
+                android:textSize="@dimen/_12ssp" />
+
+            <TextView
+                android:id="@+id/legendText6"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/fri"
+                android:textColor="@color/grey"
+                android:textSize="@dimen/_12ssp" />
+
+            <TextView
+                android:id="@+id/legendText7"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/sat"
+                android:textColor="@color/grey"
+                android:textSize="@dimen/_12ssp" />
+
+        </LinearLayout>
+
+
+        <com.kizitonwose.calendarview.CalendarView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:id="@+id/calenderView"
+            app:cv_dayViewResource="@layout/calendar_day"
+            app:cv_orientation="horizontal"
+            app:cv_maxRowCount="1"
+            app:cv_hasBoundaries="false"
+            app:cv_outDateStyle="endOfRow"
+            app:cv_inDateStyle="firstMonth"
+            app:cv_scrollMode="paged"
+            />
+
+
+
+
+</LinearLayout>

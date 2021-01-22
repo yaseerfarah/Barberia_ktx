@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/white"
+    tools:context=".View.PlacesList"
+    android:animateLayoutChanges="true"
+    >
+
+    <include layout="@layout/map_view"/>
+
+
+    <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stateListAnimator="@null"
+            android:background="@android:color/transparent"
+            >
+
+
+
+
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                app:layout_scrollFlags="scroll|enterAlways"
+                >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_90sdp"
+                    android:layout_below="@+id/headBar"
+                    android:id="@+id/bodyBar"
+                    >
+
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="@dimen/_35sdp"
+                        android:layout_height="@dimen/_35sdp"
+                        app:cardCornerRadius="@dimen/_18sdp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:id="@+id/filter"
+                        >
+
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@drawable/ic_filter"
+                            android:layout_gravity="center"
+
+                            />
+
+                    </androidx.cardview.widget.CardView>
+
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/_30sdp"
+                        app:cardCornerRadius="@dimen/_15sdp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_margin="@dimen/_5sdp">
+
+                        <com.google.android.material.button.MaterialButtonToggleGroup
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_centerInParent="true"
+                            android:layout_centerVertical="true"
+                            android:id="@+id/toggleGroup"
+                            app:singleSelection="true"
+                            app:selectionRequired="true"
+                            android:elevation="@dimen/_8sdp"
+                            app:checkedButton="@+id/mapToggle"
+                            >
+
+                            <com.google.android.material.button.MaterialButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:insetBottom="0dp"
+                                android:insetTop="0dp"
+
+                                android:id="@+id/listToggle"
+                                android:textAppearance="@style/TabLayout.text"
+                                android:text="@string/list"
+                                android:textSize="@dimen/_13ssp"
+                                app:backgroundTint="@color/button_toggle"
+                                android:textColor="@color/text_toggle"
+
+                                style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                                />
+
+                            <com.google.android.material.button.MaterialButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:insetBottom="0dp"
+                                android:insetTop="0dp"
+                                android:id="@+id/mapToggle"
+                                android:textAppearance="@style/TabLayout.text"
+                                android:text="@string/map"
+                                android:textSize="@dimen/_13ssp"
+                                app:backgroundTint="@color/button_toggle"
+                                android:textColor="@color/text_toggle"
+                                style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                                />
+
+                        </com.google.android.material.button.MaterialButtonToggleGroup>
+
+
+
+
+
+                    </androidx.cardview.widget.CardView>
+
+                </RelativeLayout>
+
+                <com.google.android.material.appbar.MaterialToolbar
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_50sdp"
+                    android:id="@+id/toolbar"
+                    app:layout_collapseMode="pin"
+                    app:contentInsetStart="0dp"
+                    >
+
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+
+                        >
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="@dimen/_35sdp"
+                            android:layout_height="@dimen/_35sdp"
+                            app:cardCornerRadius="@dimen/_18sdp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_margin="@dimen/_5sdp"
+                            android:id="@+id/notification"
+                            >
+
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:srcCompat="@drawable/ic_baseline_notifications_24"
+                                android:layout_gravity="center"
+
+                                />
+
+                        </androidx.cardview.widget.CardView>
+
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/_35sdp"
+                            app:cardCornerRadius="@dimen/_18sdp"
+                            android:layout_centerInParent="true"
+                            android:layout_centerVertical="true"
+                            android:layout_margin="@dimen/_5sdp"
+                            android:id="@+id/app_name"
+                            >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Barberia"
+                                android:textSize="@dimen/_18ssp"
+
+                                android:textStyle="bold"
+                                android:paddingStart="@dimen/_30sdp"
+                                android:paddingEnd="@dimen/_30sdp"
+                                android:layout_gravity="center|center_vertical"
+
+                                />
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="@dimen/_35sdp"
+                            android:layout_height="@dimen/_35sdp"
+                            app:cardCornerRadius="@dimen/_18sdp"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:layout_margin="@dimen/_5sdp"
+                            android:id="@+id/nav_view"
+                            >
+
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:srcCompat="@drawable/ic_baseline_nav_24"
+                                android:layout_gravity="center"
+
+                                />
+
+                        </androidx.cardview.widget.CardView>
+
+
+                    </RelativeLayout>
+
+                </com.google.android.material.appbar.MaterialToolbar>
+
+
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/listRecycler"
+        android:layout_marginTop="5dp"
+        android:visibility="gone"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+
+        />
+
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+
+
+
+
+

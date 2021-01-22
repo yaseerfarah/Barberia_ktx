@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_below="@+id/view_search">
+
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:id="@+id/recycler_title"
+        >
+
+
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="2dp"
+            android:text="@string/closer"
+            android:textColor="@color/dark_blue"
+            android:textSize="@dimen/_17ssp"
+            android:textStyle="bold"
+
+            />
+
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_20sdp"
+            android:id="@+id/more"
+           app:shapeAppearance="@style/ShapeAppearanceOverlay.barberoa.Button.Circle"
+            android:text="@string/more"
+            android:textSize="@dimen/_12ssp"
+            android:textColor="@color/dark_blue"
+            android:textAppearance="@style/TabLayout.text"
+            android:drawableEnd="@drawable/ic_blue_arrow"
+            app:backgroundTint="@android:color/white"
+            android:paddingEnd="5dp"
+            android:paddingStart="20dp"
+            android:drawablePadding="10dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="10dp"
+            app:rippleColor="@color/blue5"
+            android:insetBottom="0dp"
+            android:insetTop="0dp"
+            android:insetLeft="0dp"
+            android:insetRight="0dp"
+
+            />
+
+
+
+    </RelativeLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/recycler"
+        android:layout_below="@+id/recycler_title"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="10dp"
+        />
+
+
+
+
+
+
+</RelativeLayout>

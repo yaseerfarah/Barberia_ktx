@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/grey2"
+    tools:context=".View.PlaceDetails">
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/detailsBar"
+        android:background="@android:color/white"
+        >
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:contentScrim="@android:color/white"
+
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:title="صالون فريندز للرجال"
+            app:titleEnabled="true"
+            app:collapsedTitleGravity="center"
+            app:collapsedTitleTextAppearance="@style/TextAppearance.MyApp.Title.Collapsed"
+            android:id="@+id/collapseToolBar"
+            >
+
+
+
+
+                <include layout="@layout/place_details_bar_content"/>
+
+
+                <com.google.android.material.appbar.MaterialToolbar
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_50sdp"
+                    android:id="@+id/toolbar"
+                    app:layout_collapseMode="pin"
+                    app:contentInsetStart="0dp"
+                    >
+
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+
+                        >
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="@dimen/_35sdp"
+                            android:layout_height="@dimen/_35sdp"
+                            app:cardCornerRadius="@dimen/_18sdp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_margin="@dimen/_5sdp"
+                            android:id="@+id/notification"
+                            >
+
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:srcCompat="@drawable/ic_baseline_notifications_24"
+                                android:layout_gravity="center"
+
+                                />
+
+                        </androidx.cardview.widget.CardView>
+
+
+
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="@dimen/_35sdp"
+                            android:layout_height="@dimen/_35sdp"
+                            app:cardCornerRadius="@dimen/_18sdp"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:layout_margin="@dimen/_5sdp"
+                            android:id="@+id/nav_view"
+                            >
+
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:srcCompat="@drawable/ic_baseline_nav_24"
+                                android:layout_gravity="center"
+
+                                />
+
+                        </androidx.cardview.widget.CardView>
+
+
+                    </RelativeLayout>
+
+                </com.google.android.material.appbar.MaterialToolbar>
+
+
+
+
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+
+
+        <com.google.android.material.tabs.TabLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:layout_collapseMode="pin"
+            android:id="@+id/tabLayout"
+
+            app:tabTextAppearance="@style/TabLayout.text"
+            app:tabGravity="fill"
+            app:tabTextColor="@color/dark_blue"
+            app:tabSelectedTextColor="@color/blue2"
+            app:tabIndicatorHeight="@dimen/_3sdp"
+            app:tabIndicatorColor="@color/blue2"
+            >
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/serviceTab"
+                android:id="@+id/packageT"
+                />
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/commentsTab"
+                android:id="@+id/commentsT"
+                />
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/packageTab"
+                android:id="@+id/serviceT"
+                />
+
+        </com.google.android.material.tabs.TabLayout>
+
+
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/detailsViewPager2"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
+
+
+
+
+
+
+
+        <com.gigamole.library.ShadowLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            app:sl_shadowed="true"
+            app:sl_shadow_angle="90"
+            app:sl_shadow_radius="@dimen/_10sdp"
+            app:sl_shadow_distance="@dimen/_5sdp"
+            app:sl_shadow_color="@color/blue2"
+           >
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/booking"
+                android:layoutDirection="rtl"
+                app:shapeAppearance="@style/ShapeAppearanceOverlay.barberoa.Button.Circle"
+                app:backgroundTint="@color/blue2"
+                android:text="@string/bookingButton"
+                android:textAppearance="@style/TabLayout.text"
+                android:textSize="@dimen/_17ssp"
+                android:stateListAnimator="@null"                app:iconTint="@null"
+                app:iconSize="@dimen/_23sdp"
+                app:icon="@drawable/ic_white_arrow"
+                app:iconGravity="end"
+                android:paddingEnd="@dimen/_30sdp"
+                android:paddingStart="@dimen/_30sdp"
+                android:insetBottom="0dp"
+                android:insetTop="0dp"
+                android:insetLeft="0dp"
+                android:insetRight="0dp"
+                android:elevation="0dp"
+                app:elevation="0dp"
+
+                />
+
+        </com.gigamole.library.ShadowLayout>
+
+
+
+
+
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

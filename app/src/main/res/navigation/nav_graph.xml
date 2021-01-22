@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/home">
+
+
+    <fragment
+        android:id="@+id/home"
+        android:name="eg.com.invive.barberia_ktx.View.Home"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home"
+
+        >
+        <action
+            android:id="@+id/action_home_to_placesList"
+            app:destination="@id/placesList" />
+    </fragment>
+    <fragment
+        android:id="@+id/placesList"
+        android:name="eg.com.invive.barberia_ktx.View.PlacesList"
+        android:label="fragment_places_list"
+        tools:layout="@layout/fragment_places_list" >
+        <action
+            android:id="@+id/action_placesList_to_filter2"
+            app:destination="@id/filter2" />
+    </fragment>
+    <fragment
+        android:id="@+id/placeDetails"
+        android:name="eg.com.invive.barberia_ktx.View.PlaceDetails"
+        android:label="fragment_place_details"
+        tools:layout="@layout/fragment_place_details" >
+        <action
+            android:id="@+id/action_placeDetails_to_booking2"
+            app:destination="@id/booking2" />
+    </fragment>
+    <fragment
+        android:id="@+id/filter2"
+        android:name="eg.com.invive.barberia_ktx.View.Filter"
+        android:label="fragment_filter"
+        tools:layout="@layout/fragment_filter" />
+    <fragment
+        android:id="@+id/booking2"
+        android:name="eg.com.invive.barberia_ktx.View.Booking"
+        android:label="fragment_booking"
+        tools:layout="@layout/fragment_booking" >
+        <action
+            android:id="@+id/action_booking2_to_bookingServiceDialog"
+            app:destination="@id/bookingServiceDialog" />
+    </fragment>
+    <dialog
+        android:id="@+id/bookingServiceDialog"
+        android:name="eg.com.invive.barberia_ktx.View.BookingServiceDialog"
+        android:label="BookingServiceDialog" />
+    <action android:id="@+id/action_global_placeDetails" app:destination="@id/placeDetails" /><action android:id="@+id/action_global_home" app:destination="@id/home"/>
+
+</navigation>
+

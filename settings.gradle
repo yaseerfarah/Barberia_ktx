@@ -1,0 +1,3 @@
+include ':ShadowLayout_lib'
+include ':app'
+rootProject.name = "Barberia_ktx"

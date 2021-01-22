@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools"
+
+    android:layout_width="@dimen/_170sdp"
+    android:layout_height="@dimen/_155sdp"
+
+    android:layout_marginBottom="@dimen/_10sdp"
+    app:cardCornerRadius="8dp"
+    android:elevation="8dp"
+    android:layout_margin="@dimen/_5sdp"
+    android:id="@+id/card_view"
+    >
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_90sdp"
+            android:id="@+id/image_layout"
+            >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/pro_image"
+                android:scaleType="fitCenter"
+
+                />
+
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+               style="@style/CustomInverseProgressMid"
+                android:id="@+id/progress"
+                android:visibility="gone"
+                />
+
+        </RelativeLayout>
+
+
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/image_layout"
+            android:layout_margin="@dimen/_2sdp"
+            android:id="@+id/details"
+            >
+            <TextView
+                android:id="@+id/pro_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:textSize="@dimen/_13ssp"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_3sdp"
+                android:textColor="@color/dark_blue"
+                android:text="صالون عصفورة"
+                android:textStyle="bold"
+                android:ellipsize="end"
+                android:singleLine="true"
+                />
+
+
+            <TextView
+                android:id="@+id/pro_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/pro_name"
+                android:textSize="@dimen/_10ssp"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_3sdp"
+                android:textColor="@android:color/darker_gray"
+                android:text="أول شارع فيصل-اتجاه الجيزة-بجوار معرض الابيض لسيارات -سنتر النصر الدور الجيزة"
+                android:textStyle="normal"
+                android:ellipsize="end"
+                android:singleLine="true"
+                />
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/pro_address"
+                android:layout_marginTop="@dimen/_5sdp">
+
+                <RatingBar
+                    android:id="@+id/ratingBar"
+                    android:layoutDirection="ltr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/_3sdp"
+                    style="?attr/ratingBarStyleSmall"
+                    android:theme="@style/RatingBar"
+                    android:rating="3.5"
+                    android:progressTint="@color/blue5"
+
+                    />
+
+                <TextView
+                    android:id="@+id/pro_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:textSize="@dimen/_10ssp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:textColor="@color/red_light"
+                    android:text="@string/close"
+                    android:textStyle="bold"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    />
+
+
+                <TextView
+                    android:id="@+id/rate_namber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/pro_status"
+                    android:layout_toStartOf="@+id/ratingBar"
+                    android:textDirection="ltr"
+                    android:layout_centerVertical="true"
+                    android:textSize="@dimen/_9ssp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:textColor="@android:color/darker_gray"
+                    android:text="(تقييم 125)"
+                    android:textStyle="bold"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    />
+
+            </RelativeLayout>
+
+
+
+
+        </RelativeLayout>
+
+
+
+
+
+
+
+    </RelativeLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</com.google.android.material.card.MaterialCardView>

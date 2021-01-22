@@ -1,0 +1,757 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".View.Filter"
+
+    >
+
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/detailsBar"
+        android:background="@android:color/white"
+
+        >
+
+
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:contentScrim="@android:color/white"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:titleEnabled="false"
+            android:id="@+id/collapseToolBar"
+            >
+
+
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:id="@+id/toolbar"
+                app:layout_collapseMode="pin"
+                app:contentInsetStart="0dp"
+                >
+
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    >
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="@dimen/_35sdp"
+                        android:layout_height="@dimen/_35sdp"
+                        app:cardCornerRadius="@dimen/_18sdp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_margin="@dimen/_5sdp"
+                        android:id="@+id/notification"
+                        >
+
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@drawable/ic_baseline_notifications_24"
+                            android:layout_gravity="center"
+
+                            />
+
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:id="@+id/title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/_18ssp"
+                        android:layout_centerInParent="true"
+                        android:textColor="@color/dark_blue"
+                        android:text="@string/filter"
+                        android:textStyle="bold"
+                        android:ellipsize="marquee"
+                        android:singleLine="true"
+                        />
+
+
+
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="@dimen/_35sdp"
+                        android:layout_height="@dimen/_35sdp"
+                        app:cardCornerRadius="@dimen/_18sdp"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_margin="@dimen/_5sdp"
+                        android:id="@+id/nav_view"
+                        >
+
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@drawable/ic_baseline_nav_24"
+                            android:layout_gravity="center"
+
+                            />
+
+                    </androidx.cardview.widget.CardView>
+
+
+                </RelativeLayout>
+
+            </com.google.android.material.appbar.MaterialToolbar>
+
+
+
+
+
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+
+
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:id="@+id/categoryLayout">
+
+                <TextView
+                    android:id="@+id/cat_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:textSize="@dimen/_16ssp"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:textColor="@color/dark_blue"
+                    android:text="@string/category"
+                    android:textStyle="bold"
+                    android:ellipsize="marquee"
+                    android:singleLine="true"
+                    android:layout_weight="2"
+                    />
+
+
+                <com.google.android.material.chip.ChipGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/chip_group"
+                    app:chipSpacingHorizontal="@dimen/_2sdp"
+                    app:chipSpacingVertical="0dp"
+                    app:selectionRequired="true"
+                    app:singleSelection="false">
+
+                    <com.google.android.material.chip.Chip
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/FilterChip"
+                        android:text="صالونات رجال"
+                        />
+
+
+
+                    <com.google.android.material.chip.Chip
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/FilterChip"
+                        android:text="صالونات حريم"
+                        />
+
+
+
+                    <com.google.android.material.chip.Chip
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/FilterChip"
+                        android:text="مراكز تجميل"
+                        />
+
+
+                    <com.google.android.material.chip.Chip
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/FilterChip"
+                        android:text="سبا"
+                        />
+
+                    <com.google.android.material.chip.Chip
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/FilterChip"
+                        android:text="ميكيب ارتيست"
+                        />
+
+                </com.google.android.material.chip.ChipGroup>
+
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_25sdp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:text="@string/more"
+                    android:textColor="@color/dark_blue"
+                    android:textSize="@dimen/_12sdp"
+                    android:textStyle="bold"
+                    android:textAllCaps="false"
+                    app:rippleColor="@color/blue2"
+                    app:shapeAppearance="@style/ShapeAppearanceOverlay.barberoa.Button.Circle"
+                    app:backgroundTint="@android:color/white"
+                    app:icon="@drawable/ic_down_arrow"
+                    app:iconTint="@null"
+                    app:iconGravity="end"
+                    app:iconSize="@dimen/_15sdp"
+                    android:insetBottom="0dp"
+                    android:insetTop="0dp"
+                    android:insetLeft="0dp"
+                    android:insetRight="0dp"
+
+                    />
+
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/grey"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    />
+
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:id="@+id/serviceLayout">
+
+                <TextView
+                    android:id="@+id/service_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:textSize="@dimen/_16ssp"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:textColor="@color/dark_blue"
+                    android:text="@string/service_chip"
+                    android:textStyle="bold"
+                    android:ellipsize="marquee"
+                    android:singleLine="true"
+                    android:layout_weight="2"
+                    />
+
+
+                <com.google.android.material.chip.ChipGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/service_chip_group"
+                    app:chipSpacingHorizontal="@dimen/_2sdp"
+                    app:chipSpacingVertical="0dp"
+                    app:selectionRequired="true"
+                    app:singleSelection="false">
+
+                    <com.google.android.material.chip.Chip
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/FilterChip"
+                        android:text="قص الشعر"
+                        />
+
+
+
+                    <com.google.android.material.chip.Chip
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/FilterChip"
+                        android:text="حمام كريم"
+                        />
+
+
+
+                    <com.google.android.material.chip.Chip
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/FilterChip"
+                        android:text="ماسك للوجه"
+                        />
+
+
+                    <com.google.android.material.chip.Chip
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/FilterChip"
+                        android:text="استشوار للشعر"
+                        />
+
+                    <com.google.android.material.chip.Chip
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/FilterChip"
+                        android:text="تنعيم البشرة"
+                        />
+
+
+                </com.google.android.material.chip.ChipGroup>
+
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_25sdp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:text="@string/more"
+                    android:textColor="@color/dark_blue"
+                    android:backgroundTint="@android:color/white"
+                    android:textSize="@dimen/_12sdp"
+                    android:textStyle="bold"
+                    android:textAllCaps="false"
+                    app:rippleColor="@color/blue2"
+                    app:shapeAppearance="@style/ShapeAppearanceOverlay.barberoa.Button.Circle"
+                    app:backgroundTint="@android:color/white"
+                    app:icon="@drawable/ic_down_arrow"
+                    app:iconTint="@null"
+                    app:iconGravity="end"
+                    app:iconSize="@dimen/_15sdp"
+                    android:insetBottom="0dp"
+                    android:insetTop="0dp"
+                    android:insetLeft="0dp"
+                    android:insetRight="0dp"
+
+                    />
+
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/grey"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    />
+
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:id="@+id/distanceLayout">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/distance_title"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/_16ssp"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:textColor="@color/dark_blue"
+                        android:text="@string/distance"
+                        android:textStyle="bold"
+                        android:ellipsize="marquee"
+                        android:singleLine="true"
+                        android:layout_weight="1"
+                        />
+
+
+                    <TextView
+                        android:id="@+id/distance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/_14ssp"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:textColor="@android:color/darker_gray"
+                        android:text="10 Km"
+                        android:textStyle="normal"
+                        android:ellipsize="marquee"
+                        android:singleLine="true"
+                        android:layout_weight="2"
+                        />
+
+
+
+                </LinearLayout>
+
+
+                <com.google.android.material.slider.Slider
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/dis_slider"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:valueFrom="10"
+                    android:valueTo="50"
+                    android:stepSize="5"
+                    app:labelBehavior="gone"
+                    app:thumbColor="@color/blue2"
+                    app:trackColorActive="@color/blue2"
+                    app:trackColorInactive="@color/tra_gray"
+                    app:tickColorInactive="@color/dark_blue"
+                    app:tickColorActive="@color/grey"
+
+                    />
+
+
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/grey"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    />
+
+
+            </LinearLayout>
+
+
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:id="@+id/priceLayout">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/price_title"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/_16ssp"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:textColor="@color/dark_blue"
+                        android:text="@string/price"
+                        android:textStyle="bold"
+                        android:ellipsize="marquee"
+                        android:singleLine="true"
+                        android:layout_weight="1"
+                        />
+
+
+                    <TextView
+                        android:id="@+id/price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:textSize="@dimen/_14ssp"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:textColor="@android:color/darker_gray"
+                        android:text="من 100 إلى 200"
+                        android:textStyle="normal"
+                        android:ellipsize="marquee"
+                        android:singleLine="true"
+                        android:layout_weight="2"
+                        />
+
+
+
+                </LinearLayout>
+
+
+                <com.google.android.material.slider.RangeSlider
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:id="@+id/price_slider"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:valueFrom="10"
+                    android:valueTo="2000"
+                    app:values="@array/initial_price_rang_slider"
+                    app:labelBehavior="gone"
+                    app:thumbColor="@color/blue2"
+                    app:trackColorActive="@color/blue2"
+                    app:trackColorInactive="@color/tra_gray"
+                    app:tickColorInactive="@color/dark_blue"
+                    app:tickColorActive="@color/grey"
+
+                    />
+
+
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/grey"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    />
+
+
+            </LinearLayout>
+
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:id="@+id/evalationLayout">
+
+
+
+                    <TextView
+                        android:id="@+id/evalation_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:textSize="@dimen/_16ssp"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:textColor="@color/dark_blue"
+                        android:text="@string/rating"
+                        android:textStyle="bold"
+                        android:ellipsize="marquee"
+                        android:singleLine="true"
+                        android:layout_weight="1"
+                        />
+
+
+
+
+
+                <RatingBar
+                    android:id="@+id/ratingBar"
+                    android:layoutDirection="ltr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_gravity="center"
+                    style="?attr/ratingBarStyleIndicator"
+                    android:isIndicator="false"
+                    android:min="1"
+                    android:theme="@style/RatingBar"
+                    android:rating="1"
+                    android:stepSize="0.5"
+                    android:progressTint="@color/blue2"
+
+
+                    />
+
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/grey"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    />
+
+
+            </LinearLayout>
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:id="@+id/offerLayout">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/offer_title"
+                        android:layout_width="0dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/_16ssp"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:textColor="@color/dark_blue"
+                        android:text="@string/offer"
+                        android:textStyle="bold"
+                        android:ellipsize="marquee"
+                        android:singleLine="true"
+                        android:layout_weight="1"
+                        />
+
+
+                  <com.google.android.material.switchmaterial.SwitchMaterial
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_gravity="center_vertical"
+                      android:id="@+id/offerSwitch"
+                      app:showText="false"
+                     app:thumbTint="@android:color/white"
+                      app:trackTint="@color/track_toggle"
+                      />
+
+
+
+
+                </LinearLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/grey"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    />
+
+
+            </LinearLayout>
+
+
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+
+                >
+
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/clear"
+                    android:layoutDirection="rtl"
+                    app:shapeAppearance="@style/ShapeAppearanceOverlay.barberoa.Button.Circle"
+                    app:backgroundTint="@android:color/white"
+                    android:text="@string/clear"
+                    android:textColor="@color/dark_blue"
+                    android:textAppearance="@style/TabLayout.text"
+                    android:textSize="@dimen/_15ssp"
+                    android:insetBottom="0dp"
+                    android:insetTop="0dp"
+                    android:insetLeft="0dp"
+                    android:insetRight="0dp"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="@dimen/_5sdp"
+
+
+                    />
+
+
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layoutDirection="rtl"
+                    android:id="@+id/search"
+                    app:shapeAppearance="@style/ShapeAppearanceOverlay.barberoa.Button.Circle"
+                    app:backgroundTint="@color/blue2"
+                    android:text="@string/search"
+                    android:textAppearance="@style/TabLayout.text"
+                    android:textSize="@dimen/_15ssp"
+                    app:iconSize="@dimen/_20sdp"
+                    app:icon="@drawable/ic_white_arrow"
+                    app:iconTint="@null"
+                    app:iconGravity="end"
+                    android:paddingEnd="@dimen/_30sdp"
+                    android:paddingStart="@dimen/_30sdp"
+                    android:insetBottom="0dp"
+                    android:insetTop="0dp"
+                    android:insetLeft="0dp"
+                    android:insetRight="0dp"
+                    android:shadowColor="@color/blue2"
+                    android:layout_weight="2"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+
+
+                    />
+
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+
+
+
+
+
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

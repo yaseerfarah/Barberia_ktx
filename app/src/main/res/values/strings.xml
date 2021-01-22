@@ -1,0 +1,79 @@
+<resources>
+    <string name="app_name">Barberia</string>
+    <string name="maps_api_key" translatable="false">AIzaSyD9ChHydSDiFh79bSlV8CnLFy1yW4y6HLU</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    //navigation menu
+    <string name="home">الصفحة الرئيسية</string>
+    <string name="notification">إشعارات</string>
+    <string name="booking">حجوزاتي</string>
+    <string name="service">إستفسارات</string>
+    <string name="about">من نحن</string>
+    <string name="sitting">إعدادات</string>
+    <string name="sign_out">تسجيل الخروج</string>
+
+
+    //home search screen
+    <string name="search">إبحث</string>
+    <string name="find_out">إكتشف</string>
+
+
+    // horizontal Recycler
+    <string name="closer">الأقرب إليك</string>
+    <string name="more">المزيد</string>
+
+    //card view
+    <string name="close">مغلق</string>
+    <string name="open">مفتوح</string>
+    <string name="rate">تقييم</string>
+
+
+    //Places list Screen
+    <string name="map">خريطة</string>
+    <string name="list">قائمة</string>
+    <string name="yes">نعم</string>
+    <string name="no">لا</string>
+    <string name="alert">هل يمكنك تفعيل الGPS لكي يعمل التطبيق بشكل صحيح</string>
+
+    //Place details screen
+    <string name="packageTab">باكدج</string>
+    <string name="commentsTab">التعليقات</string>
+    <string name="serviceTab">الخدمات</string>
+
+    <string name="bookingButton">إحجز الأن</string>
+
+
+    //package list cardview
+    <string name="service_chip">الخدمات :</string>
+
+    // filter screen
+    <string name="category">الفئة :</string>
+    <string name="rating">التقييم :</string>
+    <string name="distance">المسافة :</string>
+    <string name="price">السعر :</string>
+    <string name="offer">العروض :</string>
+    <string name="filter">تصنيف حسب</string>
+    <string name="clear">مسح</string>
+
+    // booking screen
+    <string name="reservation">الحجز</string>
+    <string name="add_more">إضافة خدمة</string>
+    <string name="date">الموعد :</string>
+    <string name="discount_edit_text">هل لديك كود خصم</string>
+    <string name="apply">تفعيل</string>
+    <string name="discount">الخصم :</string>
+    <string name="total">المجموع :</string>
+    <string name="done">تأكيد الحجز</string>
+
+
+    //7-days
+    <string name="sun">الأحد</string>
+    <string name="mon">الأثنين</string>
+    <string name="tue">الثلاثاء</string>
+    <string name="wed">الأربعاء</string>
+    <string name="thu">الخميس</string>
+    <string name="fri">الجمعة</string>
+    <string name="sat">السبت</string>
+
+</resources>

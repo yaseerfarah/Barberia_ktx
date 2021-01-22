@@ -1,0 +1,497 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_180sdp"
+        android:id="@+id/header_view"
+        android:background="@drawable/drawer_gradient"
+        >
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="@dimen/profile_image_card"
+            android:layout_height="@dimen/profile_image_card"
+            android:id="@+id/person_card"
+            app:cardCornerRadius="@dimen/profile_image_radius"
+            android:elevation="12dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="20dp"
+            android:layout_above="@+id/person_name"
+            android:layout_marginBottom="15dp"
+
+
+            >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ProgressBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    style="@style/CustomInverseProgress"
+                    android:id="@+id/progress"
+                    android:visibility="gone"
+                    />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/user_image"
+                    app:srcCompat="@drawable/ic_user"
+                    android:scaleType="fitCenter"
+
+
+                    />
+
+
+            </RelativeLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Yaseer Farah"
+            android:layout_alignParentStart="true"
+            android:layout_above="@+id/person_email"
+            android:layout_marginBottom="10dp"
+            android:layout_marginStart="20dp"
+            android:textSize="@dimen/_17ssp"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:id="@+id/person_name"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="yasserfarah22@gmail.com"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="20dp"
+            android:layout_marginStart="20dp"
+            android:textSize="@dimen/_13ssp"
+            android:textColor="@color/grey"
+            android:id="@+id/person_email"
+            />
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/color_view"
+        android:layout_below="@+id/header_view"
+        android:orientation="horizontal"
+        android:weightSum="5"
+        >
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="6.5dp"
+            android:layout_weight="1"
+            android:background="@color/blue1"/>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="6.5dp"
+            android:layout_weight="1"
+            android:background="@color/blue2"/>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="6.5dp"
+            android:layout_weight="1"
+            android:background="@color/blue3"/>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="6.5dp"
+            android:layout_weight="1"
+            android:background="@color/blue4"/>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="6.5dp"
+            android:layout_weight="1"
+            android:background="@color/blue5"/>
+
+    </LinearLayout>
+
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/color_view"
+        android:id="@+id/lower_view"
+        android:orientation="vertical"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="@dimen/_50sdp"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:id="@+id/navHome"
+            >
+
+            <com.gigamole.library.ShadowLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:sl_shadowed="true"
+                app:sl_shadow_angle="90"
+                app:sl_shadow_radius="@dimen/_5sdp"
+                app:sl_shadow_distance="@dimen/_5sdp"
+                app:sl_shadow_color="@color/home_shadow_color"
+                android:layout_gravity="center_vertical"
+                >
+
+                <ImageView
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    app:srcCompat="@drawable/ic_home"
+
+
+                    />
+            </com.gigamole.library.ShadowLayout>
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/home"
+                android:textColor="@color/dark_blue"
+                android:textSize="@dimen/_15ssp"
+                android:layout_weight="2"
+                android:textStyle="bold"
+                android:layout_marginStart="15dp"
+                android:layout_gravity="center_vertical"
+
+                />
+
+
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:id="@+id/navNotification"
+            >
+
+            <com.gigamole.library.ShadowLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:sl_shadowed="true"
+                app:sl_shadow_angle="90"
+                app:sl_shadow_radius="@dimen/_5sdp"
+                app:sl_shadow_distance="@dimen/_5sdp"
+                app:sl_shadow_color="@color/notification_shadow_color"
+                android:layout_gravity="center_vertical"
+                >
+
+
+            <ImageView
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                app:srcCompat="@drawable/ic_notifcation"
+                android:layout_gravity="center_vertical"
+
+                />
+
+            </com.gigamole.library.ShadowLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/notification"
+                android:textColor="@color/dark_blue"
+                android:textSize="@dimen/_15ssp"
+                android:layout_weight="2"
+                android:textStyle="bold"
+                android:layout_marginStart="15dp"
+                android:layout_gravity="center_vertical"
+
+                />
+
+
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:id="@+id/navBooking"
+            >
+
+            <com.gigamole.library.ShadowLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:sl_shadowed="true"
+                app:sl_shadow_angle="90"
+                app:sl_shadow_radius="@dimen/_5sdp"
+                app:sl_shadow_distance="@dimen/_5sdp"
+                app:sl_shadow_color="@color/booking_shadow_color"
+                android:layout_gravity="center_vertical"
+                >
+
+            <ImageView
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                app:srcCompat="@drawable/ic_booking"
+                android:layout_gravity="center_vertical"
+
+                />
+
+            </com.gigamole.library.ShadowLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/booking"
+                android:textColor="@color/dark_blue"
+                android:textSize="@dimen/_15ssp"
+                android:layout_weight="2"
+                android:textStyle="bold"
+                android:layout_marginStart="15dp"
+                android:layout_gravity="center_vertical"
+
+                />
+
+
+
+        </LinearLayout>
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:id="@+id/navService"
+            >
+
+            <com.gigamole.library.ShadowLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:sl_shadowed="true"
+                app:sl_shadow_angle="90"
+                app:sl_shadow_radius="@dimen/_5sdp"
+                app:sl_shadow_distance="@dimen/_5sdp"
+                app:sl_shadow_color="@color/service_shadow_color"
+                android:layout_gravity="center_vertical"
+                >
+
+            <ImageView
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                app:srcCompat="@drawable/ic_service"
+                android:layout_gravity="center_vertical"
+
+                />
+            </com.gigamole.library.ShadowLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/service"
+                android:textColor="@color/dark_blue"
+                android:textSize="@dimen/_15ssp"
+                android:layout_weight="2"
+                android:textStyle="bold"
+                android:layout_marginStart="15dp"
+                android:layout_gravity="center_vertical"
+
+                />
+
+
+
+        </LinearLayout>
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:id="@+id/navAbout"
+            >
+
+            <com.gigamole.library.ShadowLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:sl_shadowed="true"
+                app:sl_shadow_angle="90"
+                app:sl_shadow_radius="@dimen/_5sdp"
+                app:sl_shadow_distance="@dimen/_5sdp"
+                app:sl_shadow_color="@color/about_shadow_color"
+                android:layout_gravity="center_vertical"
+                >
+
+            <ImageView
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                app:srcCompat="@drawable/ic_about"
+                android:layout_gravity="center_vertical"
+
+                />
+            </com.gigamole.library.ShadowLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/about"
+                android:textColor="@color/dark_blue"
+                android:textSize="@dimen/_15ssp"
+                android:layout_weight="2"
+                android:textStyle="bold"
+                android:layout_marginStart="15dp"
+                android:layout_gravity="center_vertical"
+
+                />
+
+
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:id="@+id/navSitting"
+            >
+
+            <com.gigamole.library.ShadowLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:sl_shadowed="true"
+                app:sl_shadow_angle="90"
+                app:sl_shadow_radius="@dimen/_5sdp"
+                app:sl_shadow_distance="@dimen/_5sdp"
+                app:sl_shadow_color="@color/sitting_shadow_color"
+                android:layout_gravity="center_vertical"
+                >
+
+            <ImageView
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                app:srcCompat="@drawable/ic_sitting"
+                android:layout_gravity="center_vertical"
+
+                />
+            </com.gigamole.library.ShadowLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/sitting"
+                android:textColor="@color/dark_blue"
+                android:textSize="@dimen/_15ssp"
+                android:layout_weight="2"
+                android:textStyle="bold"
+                android:layout_marginStart="15dp"
+                android:layout_gravity="center_vertical"
+
+                />
+
+
+
+        </LinearLayout>
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:id="@+id/navSignOut"
+            >
+
+
+            <com.gigamole.library.ShadowLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:sl_shadowed="true"
+                app:sl_shadow_angle="90"
+                app:sl_shadow_radius="@dimen/_5sdp"
+                app:sl_shadow_distance="@dimen/_5sdp"
+                app:sl_shadow_color="@color/sign_out_shadow_color"
+                android:layout_gravity="center_vertical"
+                >
+
+            <ImageView
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                app:srcCompat="@drawable/ic_sign_out"
+                android:layout_gravity="center_vertical"
+
+                />
+            </com.gigamole.library.ShadowLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/sign_out"                android:textColor="@color/dark_blue"
+                android:textSize="@dimen/_15ssp"
+                android:layout_weight="2"
+                android:textStyle="bold"
+                android:layout_marginStart="15dp"
+                android:layout_gravity="center_vertical"
+
+                />
+
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+
+
+    </RelativeLayout>
+</androidx.core.widget.NestedScrollView>
